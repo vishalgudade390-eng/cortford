@@ -11,7 +11,7 @@ pipeline {
         stage('clone') {
             steps {
                 echo 'Hello World'
-                git branch: 'main', url: 'https://github.com/vishalgudade390-eng/cortford'
+                git branch: 'main', url: 'https://github.com/vishalgudade390-eng/pipeline-test'
             }
         }
          stage('build') {
