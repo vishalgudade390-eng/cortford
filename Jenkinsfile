@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs 'npm'
+        nodejs 'demo'
     }
     environment {
         Name = "Vishal"
@@ -23,7 +23,9 @@ pipeline {
          stage('builing the artifac') {
             steps {
                 echo 'Hello World'
-                sh 'npm run build'
+                withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: '', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+    // some block
+}
             }
         }
     }
